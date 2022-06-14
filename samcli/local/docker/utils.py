@@ -134,7 +134,7 @@ def get_image_arch(architecture: str) -> str:
     """
     validate_architecture(architecture)
 
-    return "arm64" if architecture == ARM64 else "amd64"
+    return "arm64" if architecture == ARM64 else "x86_64"
 
 
 def get_docker_platform(architecture: str) -> str:

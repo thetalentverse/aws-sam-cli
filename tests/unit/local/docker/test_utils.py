@@ -72,7 +72,7 @@ class TestGetRapidName(TestCase):
 class TestImageArch(TestCase):
     def test_get_image_arch_must_return_right_name(self):
         self.assertEqual(get_image_arch(ARM64), "arm64")
-        self.assertEqual(get_image_arch(X86_64), "amd64")
+        self.assertEqual(get_image_arch(X86_64), "x86_64")
 
     def test_get_image_arch_must_raise_exception_for_unknown_architecture(self):
         unknown_architectures = ["unknown", None, "x86", "arm"]
@@ -85,7 +85,7 @@ class TestImageArch(TestCase):
 class TestGetDockerPlatform(TestCase):
     def test_get_docker_platform_must_return_right_name(self):
         self.assertEqual(get_docker_platform(ARM64), "linux/arm64")
-        self.assertEqual(get_docker_platform(X86_64), "linux/amd64")
+        self.assertEqual(get_docker_platform(X86_64), "linux/x86_64")
 
     def test_get_docker_platform_must_raise_exception_for_unknown_architecture(self):
         unknown_architectures = ["unknown", None, "x86", "arm"]
